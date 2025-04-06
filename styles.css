@@ -1,0 +1,43 @@
+:root{
+
+}
+
+body{
+  border:1px solid red;
+
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  height:100vh;
+  
+}
+
+.container div, h2 {
+  border:1px solid red;
+}
+div.image-content {
+  border:1px solid blue;
+  display:flex;
+  align-items: center;
+  width:max(50%, 850px);
+
+}
+
+.form-content {
+  display:flex;
+  flex-direction: column;
+}
+
+.label-input-container{
+  display:flex;
+  flex-direction: row;
+
+}
+
+.label-input-container > div {
+  display:flex;
+  flex-direction: column;
+  width:100%
+}
