@@ -1,43 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 :root{
+  /* --left-width: 450px; */
+  --main-font:"Mulish";
+  --padding:30px;
+  }
 
-}
+
 
 body{
-  border:1px solid red;
-
+  /* border:1px solid red; */
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
+  font-family: var(--main-font);
 }
 
 .container{
   display: flex;
   flex-direction: row;
+  flex:1;
   height:100vh;
+  background-color: #F9FAFB;
   
 }
 
 .container div, h2 {
-  border:1px solid red;
+  /* border:1px solid red; */
 }
-div.image-content {
-  border:1px solid blue;
-  display:flex;
-  align-items: center;
-  width:max(50%, 850px);
+
+
+.image-content {
+  /* border:1px solid blue; */
+  flex:1;
+  display: flex; 
+  flex-direction: column;
+  /* width:var(--left-width); */
+  background-image: url("annie-spratt--KKLWDAgj2Q-unsplash.jpg");
+  /* background-repeat: repeat-y; */
+  background-size: cover;
+  /* opacity:0.3; */
 
 }
+
+
+.form-content{
+  /* display:flex; */
+/* flex:1; */
+  
+}
+
+.background {
+  /* display:flex; */
+  /* border: 1px solid red; */
+  position: relative;
+  top: 130px;
+  height:150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* opacity: 0.3; */
+  /* text-align: center; */
+  /* color:blue; */
+  /* background-color: black; */
+  /* opacity: 1; */
+} 
+.logo{
+/* justify-content: end; */
+line-height: 150px;
+text-align: end;
+text-decoration: solid;
+justify-content: end;
+/* align-items: center; */
+font-weight: 700;
+font-size: 3rem;
+letter-spacing: 16px;
+color:white;
+/* padding-top: 40px; */
+/* vertical-align: center; */
+/* test */
+}
+
+#bunny {
+  /* padding: -200px -200px 50px 100px; */
+  position:absolute;
+  height:100%;
+  left:-150px ;
+  top:-0px;
+
+  /* top:-100px;
+  left:-100px; */
+  /* width:300px; */
+  opacity:1;
+
+  color: black;
+}
+
+img{
+  width:100%;
+  height:100vh;
+  opacity:0.3;
+}
+
 
 .form-content {
-  display:flex;
+  /* display:flex; */
   flex-direction: column;
+  flex:1;
+  padding-top:50px;
+
+}
+
+div.form-content > h3 {
+ padding-left: var(--padding);
+ padding-right:30px;
+
+}
+form {
+  flex:1;
+  /* border:1px solid green; */
+  background-color: white;
+  padding-left:var(--padding);
+  padding-right:var(--padding);
+  box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
+  /* background-color:rgba(244, 244, 244, 0.463) */
+  padding-bottom: 25px;
+}
+
+
+h3{
+  font-weight: 300;
+}
+
+input {
+  height:1.75em;
+  /* border-radius:10px; */
+  align-content: end;
+  text-align: start;
+  border: 1px solid grey;
+
+
+}
+
+label {
+  padding:0.1rem;
+  font-size:0.65em;
+  font-weight: 900;
+  color:rgb(100, 99, 99)
 }
 
 .label-input-container{
   display:flex;
   flex-direction: row;
+  gap:30px;
+  
+}
 
+label:nth-child(odd)
+{
+  padding-top: 11px;
 }
 
 .label-input-container > div {
+  /* border: 1px solid red; */
   display:flex;
   flex-direction: column;
-  width:100%
+  width:200px;
+
+}
+
+
+
+
+div button,
+ div p
+ {
+  /* border:1px solid red; */
+  position: relative;
+  left:30px;
+}
+
+
+button {
+margin:15px 0px;
+width:165px;
+height:3em;
+border-radius: 15px;
+border: 1px solid gray;
+background-color:#c89fa5;
+color:white;
+font-family: "Mulish";
+/*  */
+
 }
