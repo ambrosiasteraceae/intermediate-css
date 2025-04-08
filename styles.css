@@ -3,6 +3,7 @@
   /* --left-width: 450px; */
   --main-font:"Mulish";
   --padding:30px;
+  --image-width:max(40%vh, 350px)
   }
 
 
@@ -16,6 +17,7 @@ body{
 .container{
   display: flex;
   flex-direction: row;
+  position:relative;
   flex:1;
   height:100vh;
   background-color: #F9FAFB;
@@ -36,6 +38,7 @@ body{
   background-image: url("annie-spratt--KKLWDAgj2Q-unsplash.jpg");
   /* background-repeat: repeat-y; */
   background-size: cover;
+  
   /* opacity:0.3; */
 
 }
@@ -60,6 +63,34 @@ body{
   /* background-color: black; */
   /* opacity: 1; */
 } 
+
+.footer{
+  
+  position: absolute;
+  /* width:max-content; */
+  bottom:5px;
+  width:100%;
+  /* top:150px; */
+  /* left:10px; */
+
+  padding:10px;
+  line-height:100%;
+  /* bottom:10px; */
+  background-color:  rgba(0, 0, 0, 0.4);
+  /* width:50%; */
+
+}
+.credits{
+
+  color:white;
+  font-weight: 900;
+  height:5px;
+  padding:5px;
+  
+  /* width:100%; */
+  background-color: rgba(0, 0, 0, 0.4),
+}
+
 .logo{
 /* justify-content: end; */
 line-height: 150px;
@@ -83,13 +114,14 @@ color:white;
   left:-150px ;
   top:-0px;
 
-  /* top:-100px;
-  left:-100px; */
-  /* width:300px; */
-  opacity:1;
+  opacity:0.80;
 
-  color: black;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));
+  fill: white;
 }
+
+
+
 
 img{
   width:100%;
@@ -122,9 +154,8 @@ form {
   padding-bottom: 25px;
 }
 
-
 h3{
-  font-weight: 300;
+  font-weight: 900;
 }
 
 input {
@@ -132,16 +163,22 @@ input {
   /* border-radius:10px; */
   align-content: end;
   text-align: start;
-  border: 1px solid grey;
+  border: 1px solid rgb(87, 36, 36);
+}
+input:focus{
+  border-color:royalblue;
+  box-shadow: 0.5;
+}
 
-
+input:invalid{
+  border-color:red
 }
 
 label {
   padding:0.1rem;
   font-size:0.65em;
   font-weight: 900;
-  color:rgb(100, 99, 99)
+  color:rgb(91, 91, 91)
 }
 
 .label-input-container{
@@ -185,6 +222,11 @@ border: 1px solid gray;
 background-color:#c89fa5;
 color:white;
 font-family: "Mulish";
+font-weight: 700;
+
 /*  */
 
+}
+button:hover{
+  background-color: rgb(256, 159, 165);
 }
