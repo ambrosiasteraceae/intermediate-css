@@ -3,7 +3,7 @@
   /* --left-width: 450px; */
   --main-font:"Mulish";
   --padding:30px;
-  --image-width:max(40%vh, 350px)
+  /* --image-width: max(50%vh, 750px); */
   }
 
 
@@ -31,11 +31,16 @@ body{
 
 .image-content {
   /* border:1px solid blue; */
-  flex:1;
-  display: flex; 
+  /* flex:1;
+  display: flex;  */
+  flex: 0 0 auto;
+  /* padding:var(--padding); */
+
   flex-direction: column;
-  /* width:var(--left-width); */
+  /* width:300p */
+  width:50vh;
   background-image: url("annie-spratt--KKLWDAgj2Q-unsplash.jpg");
+  /* height:430px; */
   /* background-repeat: repeat-y; */
   background-size: cover;
   
@@ -53,6 +58,7 @@ body{
 .background {
   /* display:flex; */
   /* border: 1px solid red; */
+  
   position: relative;
   top: 130px;
   height:150px;
@@ -66,10 +72,11 @@ body{
 
 .footer{
   
-  position: absolute;
+  position: relative;
   /* width:max-content; */
-  bottom:5px;
-  width:100%;
+  top:650px;
+
+  /* width:100%; */
   /* top:150px; */
   /* left:10px; */
 
@@ -86,6 +93,7 @@ body{
   font-weight: 900;
   height:5px;
   padding:5px;
+  font-size:.71em;
   
   /* width:100%; */
   background-color: rgba(0, 0, 0, 0.4),
@@ -98,6 +106,7 @@ text-align: end;
 text-decoration: solid;
 justify-content: end;
 /* align-items: center; */
+ /* padding:var(--padding); */
 font-weight: 700;
 font-size: 3rem;
 letter-spacing: 16px;
@@ -113,6 +122,7 @@ color:white;
   height:100%;
   left:-150px ;
   top:-0px;
+   /* padding:var(--padding); */
 
   opacity:0.80;
 
@@ -163,7 +173,7 @@ input {
   /* border-radius:10px; */
   align-content: end;
   text-align: start;
-  border: 1px solid rgb(87, 36, 36);
+  border: 1px solid rgba(205, 193, 193, 0.538);
 }
 input:focus{
   border-color:royalblue;
