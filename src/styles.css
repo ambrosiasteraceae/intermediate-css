@@ -39,7 +39,7 @@ body{
   flex-direction: column;
   /* width:300p */
   width:50vh;
-  background-image: url("annie-spratt--KKLWDAgj2Q-unsplash.jpg");
+  background-image: url("/src/img/annie-spratt--KKLWDAgj2Q-unsplash.jpg");
   /* height:430px; */
   /* background-repeat: repeat-y; */
   background-size: cover;
