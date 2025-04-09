@@ -3,14 +3,12 @@
   /* --left-width: 450px; */
   --main-font:"Mulish";
   --padding:30px;
-  /* --image-width: max(50%vh, 750px); */
+  --image-width: max(50%, 400px);
   }
 
 
 
 body{
-  /* border:1px solid red; */
-  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif */
   font-family: var(--main-font);
 }
 
@@ -24,67 +22,37 @@ body{
   
 }
 
-.container div, h2 {
-  /* border:1px solid red; */
-}
-
 
 .image-content {
-  /* border:1px solid blue; */
-  /* flex:1;
-  display: flex;  */
   flex: 0 0 auto;
-  /* padding:var(--padding); */
-
   flex-direction: column;
-  /* width:300p */
-  width:50vh;
+  width: var(--image-width);
   background-image: url("img/annie-spratt--KKLWDAgj2Q-unsplash.jpg");
-  /* height:430px; */
-  /* background-repeat: repeat-y; */
   background-size: cover;
   
-  /* opacity:0.3; */
+
 
 }
 
 
-.form-content{
-  /* display:flex; */
-/* flex:1; */
-  
-}
 
 .background {
-  /* display:flex; */
-  /* border: 1px solid red; */
-  
+
   position: relative;
   top: 130px;
   height:150px;
   background-color: rgba(0, 0, 0, 0.4);
-  /* opacity: 0.3; */
-  /* text-align: center; */
-  /* color:blue; */
-  /* background-color: black; */
-  /* opacity: 1; */
+
 } 
 
 .footer{
   
   position: relative;
-  /* width:max-content; */
   top:650px;
-
-  /* width:100%; */
-  /* top:150px; */
-  /* left:10px; */
-
   padding:10px;
   line-height:100%;
-  /* bottom:10px; */
   background-color:  rgba(0, 0, 0, 0.4);
-  /* width:50%; */
+
 
 }
 .credits{
@@ -94,38 +62,28 @@ body{
   height:5px;
   padding:5px;
   font-size:.71em;
-  
-  /* width:100%; */
+
   background-color: rgba(0, 0, 0, 0.4),
 }
 
 .logo{
-/* justify-content: end; */
 line-height: 150px;
 text-align: end;
 text-decoration: solid;
 justify-content: end;
-/* align-items: center; */
- /* padding:var(--padding); */
 font-weight: 700;
 font-size: 3rem;
 letter-spacing: 16px;
 color:white;
-/* padding-top: 40px; */
-/* vertical-align: center; */
-/* test */
+
 }
 
 #bunny {
-  /* padding: -200px -200px 50px 100px; */
-  position:absolute;
+ position:absolute;
   height:100%;
   left:-150px ;
   top:-0px;
-   /* padding:var(--padding); */
-
   opacity:0.80;
-
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));
   fill: white;
 }
@@ -141,7 +99,6 @@ img{
 
 
 .form-content {
-  /* display:flex; */
   flex-direction: column;
   flex:1;
   padding-top:50px;
@@ -155,22 +112,21 @@ div.form-content > h3 {
 }
 form {
   flex:1;
-  /* border:1px solid green; */
   background-color: white;
   padding-left:var(--padding);
   padding-right:var(--padding);
   box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 20%);
-  /* background-color:rgba(244, 244, 244, 0.463) */
   padding-bottom: 25px;
 }
 
 h3{
   font-weight: 900;
+  flex:1;
+  
 }
 
 input {
   height:1.75em;
-  /* border-radius:10px; */
   align-content: end;
   text-align: start;
   border: 1px solid rgba(205, 193, 193, 0.538);
@@ -197,6 +153,9 @@ label {
   gap:30px;
   
 }
+form > h3 {
+  padding-top: 10px;
+}
 
 label:nth-child(odd)
 {
@@ -204,7 +163,6 @@ label:nth-child(odd)
 }
 
 .label-input-container > div {
-  /* border: 1px solid red; */
   display:flex;
   flex-direction: column;
   width:200px;
