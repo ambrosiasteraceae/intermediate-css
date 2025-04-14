@@ -1,10 +1,15 @@
 
+:root{
+  --padding:15px;
+  --card-color: rgba(227,231,229,0.639);
+}
+
 .container {
   background-color: white;
   border:1px solid pink;
   display:grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 15% auto;
+  grid-template-rows: 20% auto;
   height:100vh;
   gap:15px;
 }
@@ -12,7 +17,8 @@
 
 .header,
 .sidebar,
-.main{
+.main
+{
   background-color: rgba(227, 231, 229, 0.639);
 }
 
@@ -28,8 +34,11 @@
 
 .header div,
 .sidebar div,
-.main div{
+/* .main div, */
+.article,
+.announcements div{
   background-color: rgb(232, 227, 219);
+  border: 1px solid red;
 }
 
 
@@ -44,12 +53,37 @@
 }
 
 
-
 .main{
   grid-column: 2/3;
   grid-row:2/3;
   display: grid;
   gap:5px;
   grid-template-columns: 66.67% auto;
-  /* grid-template-rows: ; */
+
+}
+
+
+.projects{
+  display:grid;
+  grid-template-rows: 5% auto;
+  gap:5px;
+}
+
+.articles{
+  display:grid;
+  grid-template-rows: min(250px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap:25px;
+  padding: 0 var(--padding) var(--padding) var(--padding);
+  background-color: rgba(227, 231, 229, 0.639);
+}
+
+.announcements{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 40% 10% auto;
+  gap:5px;
+  padding-bottom:var(--padding);
+  /* padding:25px; */
+
 }
