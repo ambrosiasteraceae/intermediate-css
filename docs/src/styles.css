@@ -4,13 +4,20 @@
   --card-color: rgba(227,231,229,0.639);
   --background-color: #121212;
   --font-backgrond: white;
+  --article-decoration-width:7px;
+  --svg-width-minor: 50px;
+  --svg-width-middle: 75px;
+  --svg-width-major: 100px;
+  --color-1:black;
+  --color-2:black;
+  --color-3:black;
 }
 
 .container {
   background-color: white;
   border:1px solid pink;
   display:grid;
-  grid-template-columns: minmax(250px,1fr) 4fr;
+  grid-template-columns: 300px 4fr;
   grid-template-rows: 20% auto;
   height:100vh;
   gap:15px;
@@ -41,6 +48,24 @@
 .announcements div{
   background-color: rgb(232, 227, 219);
   /* border: 1px solid red; */
+}
+
+.article{
+  display:grid;
+  grid-template-columns: var(--article-decoration-width) auto;
+  border-radius:15px;
+  gap:25px;
+  overflow: hidden;
+}
+.article > div:first-child{
+  color: red;
+  width:var(--article-decoration-width);
+  background-color: var(--color-1);
+  /* border:1px solid blue; */
+  /* border-radius:unset; */
+  /* overflow-y:hidden; */
+  /* overflow-y: scroll; */
+  /* overflow-clip-margin: 0px; */
 }
 
 
@@ -94,7 +119,7 @@
   /* padding:25p */
   gap:20px;
   display:grid;
-  grid-template-columns:25% auto;
+  grid-template-columns:var(--svg-width-minor) 150px;
   /* align-content: center; */
   /* justify-content: start; */
   align-items: center;
@@ -147,7 +172,7 @@ img{
 
 .t1 {
   display:grid;
-  grid-template-columns: 35% auto;
+  grid-template-columns: var(--svg-width-major) auto;
   border:1px solid red;
 }
 
@@ -171,7 +196,7 @@ img{
 {
   /* background-color: white; */
   display:grid;
-  grid-template-columns: 15% auto;
+  grid-template-columns: var( --svg-width-minor) auto;
   align-self: center;
 
 }
@@ -190,7 +215,8 @@ img{
 .notifications
 {
   display:grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: var( --svg-width-minor) var( --svg-width-middle) auto;
+  padding-left: 20%;
 }
 .notifications div{
   align-self:center;
@@ -201,7 +227,7 @@ img{
 
 .intro{
   display:grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: var(--svg-width-major) auto;
   align-self: center;
   gap:15px;
 }
