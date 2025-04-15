@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/docs/index.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width">
+    
+    <title>Admin Dashboard </title>
+  <link href="./Admin Dashboard_files/styles.css" rel="stylesheet" type="text/css"></head>
+  
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="search"></div>
+        <div class="notifications"></div>
+        <div class="intro"></div>
+        <div class="action"></div>
+
+      </div>
+      <div class="sidebar">
+        <div class="dashboard">
+          <!-- <div></div> -->
+          <div><img src="./Admin Dashboard_files/chart-arc.svg"></div>
+          Dashboard
+          </div>
+        <div class="sep"></div>
+        <div class="two">
+          <div class="home"><div></div>
+          <div>Home</div></div>
+          <div class="profile"><div></div>
+          <div>Profile</div></div>
+          <div class="messages"><div></div>
+          <div>Messages</div></div>
+          <div class="history"><div></div>
+          <div>History</div></div>
+          <div class="tasks"><div></div>
+          <div>Tasks</div></div>
+          <div class="communities"><div></div>
+          <div>Communities</div></div>
+        </div>
+        <div class="sep"></div>
+        <div class="three">
+          <div class="settings"><div></div>
+          <div>Settings</div></div>
+          <div class="support"><div></div>
+          <div>Support</div></div>
+          <div class="privacy"><div></div>
+          <div>Privacy</div></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="projects">
+          <p>Your Projects</p>  
+          <div class="articles">
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          <div class="article">
+            <p>Super Cool Project</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, maiores. Sunt quidem ipsam, non consequatur, officiis iure illo quisquam fugiat placeat voluptatibus harum nostrum praesentium.</p>
+          </div>
+          
+        </div>
+      </div>
+        <div class="announcements">
+          <p>Announcements</p>
+          <div class="news"></div>
+          <p>Trending</p>
+          <div class="trending"></div>
+      </div>
+    </div>
+    <script src="./Admin Dashboard_files/dashboard.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></body></html>
