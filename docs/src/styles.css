@@ -2,19 +2,12 @@
 
 :root{
   --padding:15px;
-  --card-color: rgba(227,231,229,0.639);
-  /* --background-color: #121212; */
-  --font-backgrond: white;
   --article-decoration-width:7px;
   --svg-width-minor: 50px;
   --svg-width-middle: 75px;
   --svg-width-major: 100px;
-  --color-1:black;
-
-
   --color-background: #121212;
   --color-surface: #1e1e1e;
-
   --color-primary: #b986fc;
   --color-secondary: #08d6c9;
   --color-on-background: #cbcbcb;
@@ -36,8 +29,8 @@ body{
   background-color: var(--color-background);
   /* border:1px solid pink; */
   display:grid;
-  grid-template-columns: 300px 4fr;
-  grid-template-rows: 20% auto;
+  grid-template-columns: minmax(1fr,300px) 4fr;
+  grid-template-rows: minmax(150px, 20%) auto;
   height:100vh;
   gap:15px;
   color:var(--color-on-background);
@@ -72,14 +65,14 @@ img{
   padding:20px;
 }
 
-.header div,
-.sidebar div,
+/* .header div,
+.sidebar div, */
 /* .main div, */
-.article,
-.announcements div{
+/* .article,
+.announcements div{ */
   /* background-color: var(--color-surface); */
   /* border: 1px solid red; */
-}
+/* } */
 
 .article{
   display:grid;
@@ -100,6 +93,25 @@ img{
   /* overflow-y: scroll; */
   /* overflow-clip-margin: 0px; */
 }
+
+.article > div:nth-last-child(1){
+  /* border:1px solid red; */
+  padding-right:15px;
+  /* text-justify:distribute-all-lines; */
+  /* word-spacing:50em; */
+}
+.p{
+  text-justify:distribute-all-lines;
+}
+
+img:hover{
+  /* box-shadow: 0px 0px 5px var(--color-primary); */
+  filter: invert(60%) sepia(100%) saturate(1126%) hue-rotate(127deg) brightness(98%) contrast(94%);
+  /* filter: invert(71%) sepia(6%) saturate(6256%) hue-rotate(227deg) brightness(87%) contrast(103%); */
+  /* filter: invert(21%) sepia(90%) saturate(7183%) hue-rotate(267deg) brightness(78%) contrast(78%); */
+  scale:1.15;
+}
+
 
 
 .sidebar{
@@ -122,8 +134,8 @@ img{
   grid-row:2/3;
   display: grid;
   gap:5px;
-  grid-template-columns: 66.67% auto;
-
+  /* grid-template-columns: 66.67% minmax(33.33%, 400px); */
+  grid-template-columns: 3fr 1fr
 }
 
 .projects{
@@ -136,10 +148,18 @@ img{
 .articles{
   display:grid;
   grid-template-rows: min(250px, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap:25px;
   padding: 0 var(--padding) var(--padding) var(--padding);
   /* background-color: var(--color-primary); */
+}
+
+.articles > div:hover{
+  /* border:1px solid red; */
+  /* background-color: red;
+  color:red; */
+  box-shadow: 0px 0px 30px var(--color-secondary);
+  /* 0px 0px 50px var(--color-primary); */
 }
 
 .announcements{
@@ -179,9 +199,11 @@ img{
   font-size: 1.5em;
   gap:20px;
   display:grid;
-  grid-template-columns:var(--svg-width-major) 150px;
+  grid-template-columns:50px 150px;
   align-items: center;
 }
+
+
 
 .home,
 .profile,
@@ -205,7 +227,9 @@ img{
 }
 .dashboard img
 {
-  width:70%;
+  width:120%;
+  /* justify-content: start;
+  align-items: start; */
 }
 .trending,
 .news{
@@ -225,6 +249,12 @@ img{
   /* text-align: center; */
   /* align-content: center; */
 }
+.sidebar:hover,
+.header:hover,
+.news:hover,
+.trending:hover{
+  box-shadow: 0px 0px 30px var(--color-secondary);
+}
 
 .news,
 .trending{
@@ -238,6 +268,9 @@ img{
 }
 .news div:nth-child(-n+2){
   border-bottom: 1.5px solid var(--color-secondary);
+}
+.news div{
+  margin-top:10px;
 }
 
 
@@ -268,9 +301,14 @@ img{
   height:25px;
   width: 90%;
   overflow:auto;
-  background-color: var(--color-secondary) !important;
+  background-color: var(--color-secondary);
   border-radius: 25px;
-  opacity: 0.9;
+  opacity: 0.7;
+}
+
+.search-bar:hover{
+  background-color:  var(--color-secondary);
+  opacity:1;
 }
 
 .notifications
@@ -319,7 +357,10 @@ justify-content: center;
 
 .action{
   display:flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  /* margin:25px; */
+  padding:25px;
+  /* gap:25px; */
 }
 button {
   text-align: center;
@@ -328,10 +369,21 @@ button {
   width:100px;
   height:30px;
   border-radius: 25px;
-  color: var(--color-on-secondary);
-  background-color:var(--color-secondary)!important;
+  border:2px solid var(--color-secondary);
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+  /* color: var(--color-on-secondary); */
+  /* background-color:var(--color-on-surface); */
+  opacity: 1;
 }
 
+button:hover{
+opacity:1;
+/* scale:1.2; */
+background-color: var(--color-secondary);
+color:var(--color-on-secondary)
+
+}
 .name{
   font-size:1.3em;
   flex-wrap: nowrap;
